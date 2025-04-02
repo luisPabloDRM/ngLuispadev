@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ChildComponent } from './child/child.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, ChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'ngLuispadev';
+  text = 'Hola voy a probar si me empano con los inputs'
+
+  receiveMessage($event:string){
+    alert($event)
+  }
 }
