@@ -1,3 +1,9 @@
-<app-child [text]="text" [title]="title" (messageEvent) = receiveMessage($event)/>
+<app-child
+  [text]="text"
+  [text2]="text2"
+  [title]="title"
+  (messageEvent)="receiveMessage($event)"
+  (newMessagge)="receiveOtherMessagge($event)"
+/>
 
 <router-outlet></router-outlet>

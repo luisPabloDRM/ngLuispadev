@@ -7,13 +7,19 @@ import { ChildComponent } from './child/child.component';
   standalone: true,
   imports: [RouterOutlet, ChildComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'ngLuispadev';
-  text = 'Hola voy a probar si me empano con los inputs'
+  text = 'Hola voy a probar si me empano con los inputs';
 
-  receiveMessage($event:string){
-    alert($event)
+  text2 = 'Prueba final';
+
+  receiveMessage($event: string) {
+    alert($event);
+  }
+
+  receiveOtherMessagge($event: string) {
+    alert($event);
   }
 }
